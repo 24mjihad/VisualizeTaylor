@@ -1,0 +1,44 @@
+<!--
+  Hit RUN to see this project in action!
+  
+  This project will auto-refresh as you edit the HTML, CSS and JS. See README.md for more info (including how to disable auto-refresh and install packages).
+
+https://www.javatpoint.com/how-to-draw-a-line-using-javascript
+-->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Mohammad Jihad</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main>
+      <h1 class="title">Visualize Taylor series approximations</h1>
+      <p class="description">
+        By <code class="code">Mohammad Jihad '24</code>. For AP CALCULUS BC
+        With<code class="code">Mr. Benson</code>
+      </p>
+    </main>
+
+    <div class="content">
+      <div class="upperContent">
+        <div class="button-container">
+            <button onclick="changeSelection('Sin(x)')" class="selectable-button">Sin(x)</button>
+            <button onclick="changeSelection('Cos(x)')" class="selectable-button">Cos(x)</button>
+            <button onclick="changeSelection('e^x')" class="selectable-button">e^x</button>
+        </div>
+      <h1 id="dText">Showing Sin(x)</h1>
+      <label for="terms">Terms:</label>
+      <input type="number" id="terms" value ="1" min ="1"  max="15">
+      <button onclick="plotTaylorSeries()">Plot</button>
+      </div>
+      <canvas id="plot" width ="800" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
